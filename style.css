@@ -12,9 +12,13 @@ html, body {
   position: sticky;
   top: 0;
   box-shadow: 5px 2px 10px #e0e0e0;
+  
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
-.topnav p{
+.topnav a{
   color: black;
   font-size: 12pt;  
 }
@@ -22,15 +26,16 @@ html, body {
 .topnavText{
   text-decoration: none;
   color: black;
-  padding-left: 15px;
   transition: 0.5s ease;
-  font-weight: normal;
+  font-size: 15px;
+  
 }
 
 .topnavText:hover{
   transition: 0.5s ease;
-  font-size: 15pt;
-  font-weight: bold;
+  color: #e0e0e0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
 }
 a{
   text-decoration: none;
