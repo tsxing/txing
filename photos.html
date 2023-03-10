@@ -50,59 +50,172 @@
   <div class="site-body">
     <div class="row">
       <div class="column">
-        <img src="photos/img1.PNG">
-        <img src="photos/img4.jpg">
-        <img src="photos/img7.jpg">
-      </div>
-      <div class="column">
-        <img src="photos/img2.jpg">
-        <img src="photos/img5.JPG">
-        <img src="photos/img8.PNG">
-      </div>
-      <div class="column">
-        <img src="photos/img3.PNG">
-        <img src="photos/img6.png">
-        <img src="photos/img9.png">
+        
+        <div class="container">
+          <img src="photos/img1.PNG"> 
+          <div class="overlay">
+            <div class="text">
+              March 7, 2023
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="photos/img4.jpg">
+          <div class="overlay">
+            <div class="text">
+              December 6, 2022
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="photos/img7.jpg">
+          <div class="overlay">
+            <div class="text">
+              February 10, 2023
+            </div>
+          </div>
+        </div>
+        
       </div>
       
+      <div class="column">
+
+        <div class="container">
+          <img src="photos/img2.jpg">
+          <div class="overlay">
+            <div class="text">
+              February 19, 2023
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="photos/img5.JPG">
+          <div class="overlay">
+            <div class="text">
+              January 1, 2023
+            </div>
+          </div>
+        </div>
+    
+        <div class="container">
+          <img src="photos/img8.PNG">
+          <div class="overlay">
+            <div class="text">
+              December 25, 2022
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="column">
+
+        <div class="container">
+          <img src="photos/img3.PNG">
+          <div class="overlay">
+            <div class="text">
+              October 18, 2022
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="photos/img6.png">
+          <div class="overlay">
+            <div class="text">
+              January 26, 2023
+            </div>
+          </div>
+        </div>
+
+        <div class="container">
+          <img src="photos/img9.png">
+          <div class="overlay">
+            <div class="text">
+              March 6, 2023
+            </div>
+          </div>
+        </div>
+       
+      </div>
     </div>
+
+    <br>
+    <br>
+    <br>
 
 </body>
 </html>
 
 <style>
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0 15px;
-}
-
-/* Create 4 equal columns that sits next to each other */
-.column {
-  flex: 25%;
-  max-width: 33%;
-  padding: 0 15px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-  width: 100%;
-}
-
-/* Responsive layout - makes 2 column-layout instead of 4 columns */
-@media screen and (max-width: 800px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 15px;
   }
-}
+  
+  /* Create 4 equal columns that sits next to each other */
+  .column {
+    flex: 25%;
+    max-width: 33%;
+    padding: 0 15px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    display: block;
+  }
+  
+  .container {
+    position: relative;
+  }
+  
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+  }
+  .container:hover .overlay{
+    opacity: 0.7; 
+  }
+  
+  /* Responsive layout - makes 2 column-layout instead of 4 columns */
+  @media screen and (max-width: 800px) {
+    .column {
+      flex: 50%;
+      max-width: 50%;
+    }
+  }
 
 /* Responsive layout - makes the two columns stack on top*/
-@media screen and (max-width: 600px) {
-  .column {
-    flex: 100%;
-    max-width: 100%;
+  @media screen and (max-width: 600px) {
+    .column {
+      flex: 100%;
+      max-width: 100%;
+    }
   }
-}
 </style>
